@@ -123,7 +123,7 @@ tags: [Azure, Data Engineering, certificate]
   iii. In response to an event, such as new data files being added to a folder in a data lake.
 
 ## Data engineering with Azure Databricks
-  ### Explore Azure Databricks
+### Explore Azure Databricks
   1. Get started with Azure Databricks:
      
      Azure Databricks is a cloud-based distributed platform for data processing and analytics in a data lakehouse. Databricks is built on Apache Spark and related open source technologies, and is designed to unify data science, data engineering, and business data analytics in an easy to use environment that enables users to spend more time working effectively with data, and less time focused on managing clusters and infrastructure.
@@ -151,7 +151,7 @@ tags: [Azure, Data Engineering, certificate]
   
      v. SQL Warehouses - SQL Warehouses are relational compute resources with endpoints that enable client applications to connect to an Azure Databricks workspace and use SQL to work with data in tables. The results of SQL queries can be used to create data visualizations and dashboards to support business analytics and decision making.
   
-  ### Use Apache Spark in Azure Databricks
+### Use Apache Spark in Azure Databricks
   1. Get to know Spark:
      
      To gain a better understanding of how to process and analyze data with Apache Spark in Azure Databricks, it's important to understand the underlying architecture.
@@ -197,7 +197,7 @@ tags: [Azure, Data Engineering, certificate]
      
      One of the most intuitive ways to analyze the results of data queries is to visualize them as charts. Notebooks in Azure Databricks provide charting capabilities in the user interface, and when that functionality doesn't provide what you need, you can use one of the many Python graphics libraries to create and display data visualizations in the notebook.
 
-  ### Use Delta Lake in Azure Databricks
+### Use Delta Lake in Azure Databricks
   1. Get Started with Delta Lake:
      
      Delta Lake is an open-source storage layer that adds relational database semantics to Spark-based data lake processing. Delta Lake is supported in Azure Synapse Analytics Spark pools for PySpark, Scala, and .NET code.
@@ -214,7 +214,7 @@ tags: [Azure, Data Engineering, certificate]
      
      All of the data we've explored up to this point has been static data in files. However, many data analytics scenarios involve streaming data that must be processed in near real time.
 
-  ### Use SQL Warehouses in Azure Databricks
+### Use SQL Warehouses in Azure Databricks
   1. Get started with SQL Warehouses:
      
      SQL Warehouses (formerly known as SQL Endpoints) provide a relational database interface for data in Azure Databricks. The data is stored in files that are abstracted by Delta tables, but from the perspective of the user or client application, the SQL Warehouse behaves like a relational database.
@@ -233,7 +233,7 @@ tags: [Azure, Data Engineering, certificate]
      
      Azure Databricks SQL is primarily designed for data analytics and visualization workloads. To support these workloads, users can create queries to retrieve and summarize data from tables, and dashboards to share visualizations of the data.
 
-  ### Run Azure Databricks Notebooks with Azure Data Factory
+### Run Azure Databricks Notebooks with Azure Data Factory
   1. Understand Azure Databricks notebooks and pipelines:
      
      In Azure Databricks, you can use notebooks to run code written in Python, Scala, SQL, and other languages to ingest and process data. Notebooks provide an interactive interface in which you can run individual code cells and use Markdown to include notes and annotations.
