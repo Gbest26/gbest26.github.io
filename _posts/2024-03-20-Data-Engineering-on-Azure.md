@@ -8,6 +8,7 @@ tags: [Azure, Data Engineering, certificate]
 
 ## Introduction to data engineering on Azure
 1. What is data engineering:
+   
    Data engineering is the process of integrating, transforming, and consolidating data from various structured and unstructured data systems into structures that are suitable for building analytics solutions.
 
 2. Important data engineering concepts
@@ -46,19 +47,24 @@ tags: [Azure, Data Engineering, certificate]
 
 ## Analyze data with Apache Spark in Azure Synapse Analytics 
 1. What is Apache Spark:
+
    Apache Spark is an open source processing framework for large-scale data processing and analytics.
 
 2. Use Spark in Azure Synapse Analytics:
+
    You can run many different kinds of application on Spark, including code in Python or Scala scripts, Java code compiled as a Java Archive (JAR), and others. Spark is commonly used in two kinds of workload.
 
-3. Analyze data with Spark
-   One of the benefits of using Spark is that you can write and run code in various programming languages, enabling you to use the programming skills you already have and to use the most appropriate language for a given task.
+3. Analyze data with Spark:
+   
+   One of the benefits of using Spark is that you can write and run code in various programming languages, enabling you to use the   programming skills you already have and to use the most appropriate language for a given task.
 
-4. Visualize data with Spark
+4. Visualize data with Spark:
+   
    One of the most intuitive ways to analyze the results of data queries is to visualize them as charts. Notebooks in Azure Synapse Analytics provide some basic charting capabilities in the user interface, and when that functionality doesn't provide what you need, you can use one of the many Python graphics libraries to create and display data visualizations in the notebook.
 
 ## Analyze data in a relational data warehouse 
 1. Design a data warehouse schema:
+   
    Like all relational databases, a data warehouse contains tables in which the data you want to analyze is stored.
 
    Tables in a data warehouse.
@@ -72,13 +78,16 @@ tags: [Azure, Data Engineering, certificate]
    Fact tables store details of observations or events; for example, sales orders, stock balances, exchange rates, or recorded temperatures.
 
 ## Create data warehouse tables
-1. Creating a dedicated SQL pool: 
+1. Creating a dedicated SQL pool:
+   
    To create a relational data warehouse in Azure Synapse Analytics, you must create a dedicated SQL Pool. The simplest way to do this in an existing Azure Synapse Analytics workspace is to use the Manage page in Azure Synapse Studio.
 
-2. Load data warehouse tables:
+3. Load data warehouse tables:
+   
    As a data engineer you can load data into your data warehouse from any data source, either from your your datalake or the web.
 
-3. Query a data warehouse:
+5. Query a data warehouse:
+   
    When the dimension and fact tables in a data warehouse have been loaded with data, you can use SQL to query the tables and analyze the data they contain. The Transact-SQL syntax used to query tables in a Synapse dedicated SQL pool is similar to SQL used in SQL Server or Azure SQL Database.
 
 ## Build a data pipeline in Azure Synapse Analytics   
