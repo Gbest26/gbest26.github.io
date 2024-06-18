@@ -1,0 +1,438 @@
+---
+layout: post
+title: AI Engineering with Azure
+subtitle: Learning how to use AI Engineering on Azure
+categories: AI
+tags: [Azure, Ai Engineering, Generative Ai]
+---
+
+## AI ENGINEERING ON AZURE
+### Get started with Azure AI Services
+1. Define artificial intelligence:
+
+Artificial Intelligence (AI) is increasingly prevalent in the software applications we use every day; including digital assistants in our homes and cellphones, automotive technology in the vehicles that take us to work, and smart productivity applications that help us do our jobs when we get there.
+
+we tend to think of AI as software that exhibits one or more human-like capabilities, such as:
+
+Visual perception - The ability to use computer vision capabilities to accept, interpret, and process input from images, video streams, and live cameras.
+
+Text analysis and conversation - The ability to use natural language processing (NLP) to not only "read", but also generate realistic responses and extract semantic meaning from text.
+
+Speech - The ability to recognize speech as input and synthesize spoken output. The combination of speech capabilities together with the ability to apply NLP analysis of text enables a form of human-compute interaction that's become known as conversational AI, in which users can interact with AI agents (usually referred to as bots) in much the same way they would with another human.
+
+Decision making - The ability to use past experience and learned correlations to assess situations and take appropriate actions. For example, recognizing anomalies in sensor readings and taking automated action to prevent failure or system damage.
+
+2. Understand AI-related terms:
+
+   There are several related terms that people use when talking about artificial intelligence, so it's useful to have clear definitions for each.
+
+   i. Data Science
+
+   ii. Machine Learning
+
+   iii. Artificial intelligent.
+
+3. Understand considerations for AI Engineers
+
+   Increasingly, software solutions include AI features; so software engineers need to know how to integrate AI capabilities into their applications and services.
+
+   The advances made in machine learning, together with the increased availability of large volumes of data and powerful compute on which to process it and train predictive models, has led to the availability of prepackaged software services that encapsulate AI capabilities. Software engineers can take advantage of these services to create applications and agents that use the underlying AI functionality, using them as building blocks to create intelligent solutions.
+
+4. Understand considerations for responsible AI
+
+   i. Reliability and safety
+
+   ii. fairness
+
+   iii. Privacy and security
+
+   iv. Inclusiveness
+
+   v. Transparency
+
+   vi. Accountability
+
+5. Understand capabilities of Azure Machine Learning:
+
+   Azure Machine Learning provides the following features and capabilities:
+
+  Automated machine learning	This feature enables non-experts to quickly create an effective machine learning model from data.
+
+  Azure Machine Learning designer	A graphical interface enabling no-code development of machine learning solutions.
+
+  Data and compute management	Cloud-based data storage and compute resources that professional data scientists can use to run data experiment code at scale.
+
+  Pipelines	Data scientists, software engineers, and IT operations professionals can define pipelines to orchestrate model training, deployment, and management tasks.
+
+6. Understand capabilities of Azure AI Services:
+
+   Azure AI Services are cloud-based services that encapsulate AI capabilities. Rather than a single product, you should think of Azure AI Services as a set of individual services that you can use as building blocks to compose sophisticated, intelligent applications.
+
+7. Understand capabilities of the Azure OpenAI Service:
+
+   Generative AI is a relatively new and quickly progressing field of AI focused on AI models that generate content. Content that these models generate can be in the form of text, images, code or more, and in a way that almost feels like interacting with a real person in a real conversation. Generative AI models depend on large language models (LLMs) based on the transformer architecture that evolved from years of machine learning progress. Generative AI models are often queried with natural language prompts, and return an impressively accurate response when prompted correctly.
+
+8. Understand capabilities of Azure Cognitive Search
+
+   Searching for information is a common requirement in many applications, from dedicated search engine web sites to mobile apps that can find context-appropriate information based on where you are and what you want to accomplish.
+
+### Develop decision support solutions with Azure AI Services 
+1. Overview of text moderation:
+
+When you're using machine-assisted content moderation, you either block, approve, or review the content based on your policies and thresholds. You can use machine assistance to augment human moderation of environments where partners, employees, and consumers generate text content. These places include:
+
+Chat rooms
+
+Discussion boards
+
+Chatbots
+
+E-commerce catalogs
+
+Documents
+
+2. Create and subscribe to a Content Moderator resource
+
+Before you can begin to test content moderation or integrate it into your custom applications, you need to create and subscribe to a Content Moderator resource and get the subscription key for accessing the resource.
+
+### Create computer vision solutions with Azure AI Vision
+#### Analyze images
+1. Provision an Azure AI Vision resource
+
+The Azure AI Vision service is designed to help you extract information from images. It provides functionality that you can use for:
+
+Description and tag generation - determining an appropriate caption for an image, and identifying relevant "tags" that can be used as keywords to indicate its subject.
+
+Object detection - detecting the presence and location of specific objects within the image.
+
+People detection - detecting the presence, location, and features of people in the image.
+
+Image metadata, color, and type analysis - determining the format and size of an image, its dominant color palette, and whether it contains clip art.
+
+Category identification - identifying an appropriate categorization for the image, and if it contains any known landmarks.
+
+Background removal - detecting the background in an image and output the image with the background transparent or a greyscale alpha matte image.
+
+Moderation rating - determine if the image includes any adult or violent content.
+
+Optical character recognition - reading text in the image.
+
+Smart thumbnail generation - identifying the main region of interest in the image to create a smaller "thumbnail" version.
+
+2. Analyze an image:
+
+   To analyze an image, you can use the Analyze Image REST method or the equivalent method in the SDK for your preferred programming language, specifying the visual features you want to include in the analysis (and if you select categories, whether or not to include details of celebrities or landmarks). This method returns a JSON document containing the requested information.
+
+3. Generate a smart-cropped thumbnail and remove background:
+
+   Thumbnails are often used to provide smaller versions of images in applications and websites. For example, a tourism site might display a list of tourist attractions in a city with a small, representative thumbnail image for each attraction; and only display the full image when the user selects the "details" page for an individual attraction.
+
+### Image classification with custom Azure AI Vision models
+1. Understand custom model types
+
+Custom Azure AI Vision models have different functionality based on the type. The types of custom models include Image classification, Object detection, and Product recognition.
+
+i. Image classification
+
+ii. Object Dataction
+
+iii. Product Recognition
+
+2. Create a custom project
+
+To create a custom Azure AI Vision model, you first need an Azure AI Services resource (or an Azure AI Vision resource). Once that resource is deployed to your subscription, you need to create a custom project.
+
+3. Label and train a custom model
+
+Once you upload your images to blob storage and created your dataset, the next step is to label your images and connect the resulting COCO file. If you already have a COCO file for your training images, you can skip the labeling step.
+
+Labeling your training images: 
+Labeling your training images is done in Azure Machine Learning studio, using the Data Labeling Project. Having complete and accurate labels for your training images greatly improves the performance of your trained model. When you label your images, be sure to accurately assign labels and completely label all instances of each class.
+
+Training your model: 
+With all the training images labeled, the next step is training your model. When training a model select the model type, specify the dataset you want to use as training data, and indicate the training budget. The training budget is an upper bound of time for how long the training will run; the actual time used for training is often less than the specified budget.
+
+#### Detect, analyze, and recognize faces
+1. Identify options for face detection analysis and identification:
+   There are two Azure AI services that you can use to build solutions that detect faces or people in images.
+
+   i. The Azure AI Vision service
+   The Azure AI Vision service enables you to detect people in an image, as well as returning a bounding box for its location.
+
+   ii. The Face service
+The Face service offers more comprehensive facial analysis capabilities than the Azure AI Vision service, including:
+
+Face detection (with bounding box).
+
+Comprehensive facial feature analysis (including head pose, presence of spectacles, blur, facial landmarks, occlusion and others).
+
+Face comparison and verification.
+
+Facial recognition.
+
+2. Understand considerations for face analysis
+
+While all applications of artificial intelligence require considerations for responsible and ethical use, system that rely on facial data can be particularly problematic.
+
+3. Understand capabilities of the face service
+
+The Face service provides comprehensive facial detection, analysis, and recognition capabilities.
+
+The Face service provides functionality that you can use for:
+
+Face detection - for each detected face, the results include an ID that identifies the face and the bounding box coordinates indicating its location in the image.
+
+Face attribute analysis - you can return a wide range of facial attributes, including:
+
+Head pose (pitch, roll, and yaw orientation in 3D space)
+
+Glasses (NoGlasses, ReadingGlasses, Sunglasses, or Swimming Goggles)
+
+Blur (low, medium, or high)
+
+Exposure (underExposure, goodExposure, or overExposure)
+
+Noise (visual noise in the image)
+
+Occlusion (objects obscuring the face)
+
+Accessories (glasses, headwear, mask)
+
+QualityForRecognition (low, medium, or high)
+
+Facial landmark location - coordinates for key landmarks in relation to facial features (for example, eye corners, pupils, tip of nose, and so on)
+
+Face comparison - you can compare faces across multiple images for similarity (to find individuals with similar facial features) and verification (to determine that a face in one image is the same person as a face in another image)
+
+Facial recognition - you can train a model with a collection of faces belonging to specific individuals, and use the model to identify those people in new images.
+
+Facial liveness - liveness can be used to determine if the input video is a real stream or a fake to prevent bad intentioned individuals from spoofing the recognition system.
+
+4. Compare and match detected faces
+
+When a face is detected by the Face service, a unique ID is assigned to it and retained in the service resource for 24 hours. The ID is a GUID, with no indication of the individual's identity other than their facial features.
+
+5. Implement facial recognition:
+
+   To train a facial recognition model with the Face service:
+
+Create a Person Group that defines the set of individuals you want to identify (for example, employees).
+Add a Person to the Person Group for each individual you want to identify.
+Add detected faces from multiple images to each person, preferably in various poses. The IDs of these faces will no longer expire after 24 hours (so they're now referred to as persisted faces).
+Train the model.
+
+#### Analyze video
+1. Understand Azure Video Indexer capabilities
+
+The Azure Video Indexer service is designed to help you extract information from videos. It provides functionality that you can use for:
+
+Facial recognition - detecting the presence of individual people in the image. This requires Limited Access approval.
+
+Optical character recognition - reading text in the video.
+
+Speech transcription - creating a text transcript of spoken dialog in the video.
+
+Topics - identification of key topics discussed in the video.
+
+Sentiment - analysis of how positive or negative segments within the video are.
+
+Labels - label tags that identify key objects or themes throughout the video.
+
+Content moderation - detection of adult or violent themes in the video.
+
+Scene segmentation - a breakdown of the video into its constituent scenes.
+
+2. Extract custom insights
+
+Azure Video Indexer includes predefined models that can recognize well-known celebrities, do OCR, and transcribe spoken phrases into text. You can extend the recognition capabilities of Video Analyzer by creating custom models for:
+
+i. People. Add images of the faces of people you want to recognize in videos, and train a model. Video Indexer will then recognize these people in all of your videos.
+
+ii. Language. If your organization uses specific terminology that may not be in common usage, you can train a custom model to detect and transcribe it.
+
+iii. Brands. You can train a model to recognize specific names as brands, for example to identify products, projects, or companies that are relevant to your business.
+
+3. Use Video Analyzer widgets and APIs
+
+While you can perform all video analysis tasks in the Azure Video Indexer portal, you may want to incorporate the service into custom applications. There are two ways you can accomplish this.
+
+### Develop natural language processing solutions with Azure AI Services.
+#### Analyze text with Azure AI Language
+1. Provision an Azure AI Language resource
+
+Azure AI Language is designed to help you extract information from text. It provides functionality that you can use for:
+
+Language detection - determining the language in which text is written.
+
+Key phrase extraction - identifying important words and phrases in the text that indicate the main points.
+
+Sentiment analysis - quantifying how positive or negative the text is.
+
+Named entity recognition - detecting references to entities, including people, locations, time periods, organizations, and more.
+
+Entity linking - identifying specific entities by providing reference links to Wikipedia articles.
+
+2. Detect language
+
+The Azure AI Language detection API evaluates text input and, for each document submitted, returns language identifiers with a score indicating the strength of the analysis.
+
+This capability is useful for content stores that collect arbitrary text, where language is unknown. Another scenario could involve a chat bot. If a user starts a session with the chat bot, language detection can be used to determine which language they are using and allow you to configure your bot responses in the appropriate language.
+
+3. Extract key phrases
+
+Key phrase extraction is the process of evaluating the text of a document, or documents, and then identifying the main points around the context of the document(s).
+
+4. Analyze sentiment
+5. 
+Sentiment analysis is used to evaluate how positive or negative a text document is, which can be useful in various workloads, such as:
+
+Evaluating a movie, book, or product by quantifying sentiment based on reviews.
+Prioritizing customer service responses to correspondence received through email or social media messaging.
+
+5. Extract entities
+
+Named Entity Recognition identifies entities that are mentioned in the text. Entities are grouped into categories and subcategories, for example:
+
+Person
+
+Location
+
+DateTime
+
+Organization
+
+Address
+
+Email
+
+URL
+
+6. Extract linked entities
+
+In some cases, the same name might be applicable to more than one entity. For example, does an instance of the word "Venus" refer to the planet or the goddess from mythology?
+
+#### Create question answering solutions with Azure AI Language
+
+1. Understand question answering
+
+Azure AI Language includes a question answering capability, which enables you to define a knowledge base of question and answer pairs that can be queried using natural language input. The knowledge base can be published to a REST endpoint and consumed by client applications, commonly bots.
+
+2. Compare question answering to Azure AI Language understanding
+
+A question answering knowledge base is a form of language model, which raises the question of when to use question answering, and when to use the conversational language understanding capabilities of Azure AI Language.
+
+3. Create a knowledge base
+
+To create a question answering solution, you can use the REST API or SDK to write code that defines, trains, and publishes the knowledge base. However, it's more common to use the Language Studio web interface to define and manage a knowledge base.
+
+To create a knowledge base you:
+
+Sign in to Azure portal.
+
+Search for Azure AI services using the search field at the top of the portal.
+
+Select Create under the Language Service resource.
+
+Create a resource in your Azure subscription:
+
+Enable the question answering feature.
+
+Create or select an Azure AI Search resource to host the knowledge base index.
+
+In Language Studio, select your Azure AI Language resource and create a Custom question answering project.
+
+Add one or more data sources to populate the knowledge base:
+
+URLs for web pages containing FAQs.
+
+Files containing structured text from which questions and answers can be derived.
+
+Predefined chit-chat datasets that include common conversational questions and responses in a specified style.
+
+Edit question and answer pairs in the portal.
+
+4. Implement multi-turn conversation
+
+Although you can often create an effective knowledge base that consists of individual question and answer pairs, sometimes you might need to ask follow-up questions to elicit more information from a user before presenting a definitive answer. This kind of interaction is referred to as a multi-turn conversation.
+
+5. Test and publish a knowledge base
+
+After you have defined a knowledge base, you can train its natural language model, and test it before publishing it for use in an application or bot.
+
+Testing a knowledge base: 
+You can test your knowledge base interactively in Language Studio, submitting questions and reviewing the answers that are returned. You can inspect the results to view their confidence scores as well as other potential answers.
+
+Deploying a knowledge base: 
+When you are happy with the performance of your knowledge base, you can deploy it to a REST endpoint that client applications can use to submit questions and receive answers. You can deploy it directly from Language Studio.
+
+7. Improve question answering performance:
+
+   Use active learning:
+   
+Active learning can help you make continuous improvements to get better at answering user questions correctly over time. People often ask questions that are phrased differently, but ultimately have the same meaning. Active learning can help in situations like this because it enables you to consider alternate questions to each question and answer pair. Active learning is enabled by default.
+
+#### Build a conversational language understanding model.
+1. Understand prebuilt capabilities of the Azure AI Language service
+
+The Azure AI Language service provides various features for understanding human language. You can use each feature to better communicate with users, better understand incoming communication, or use them together to provide more insight into what the user is saying, intending, and asking about.
+
+2. Understand resources for building a conversational language understanding model
+
+To use the Language Understanding service to develop a NLP solution, you'll need to create a Language resource in Azure. That resource will be used for both authoring your model and processing prediction requests from client applications.
+
+3. Define intents, utterances, and entities
+
+Utterances are the phrases that a user might enter when interacting with an application that uses your language model. An intent represents a task or action the user wants to perform, or more simply the meaning of an utterance. You create a model by defining intents and associating them with one or more utterances.
+
+4. Use patterns to differentiate similar utterances
+
+In some cases, a model might contain multiple intents for which utterances are likely to be similar. You can use the pattern of utterances to disambiguate the intents while minimizing the number of sample utterances.
+
+5. Use pre-built entity components
+
+You can create your own language models by defining all the intents and utterances it requires, but often you can use prebuilt components to detect common entities such as numbers, emails, URLs, or choices.
+
+6. Train, test, publish, and review a conversational language understanding model
+
+   Creating a model is an iterative process with the following activities:
+
+Train a model to learn intents and entities from sample utterances.
+
+Test the model interactively or using a testing dataset with known labels
+
+Deploy a trained model to a public endpoint so client apps can use it
+
+Review predictions and iterate on utterances to train your model
+
+#### Create a custom text classification solution.
+1. Understand types of classification projects
+Custom text classification assigns labels, which in the Azure AI Language service is a class that the developer defines, to text files. For example, a video game summary might be classified as "Adventure", "Strategy", "Action" or "Sports".
+
+Custom text classification falls into two types of projects:
+
+Single label classification - you can assign only one class to each file. Following the above example, a video game summary could only be classified as "Adventure" or "Strategy".
+
+Multiple label classification - you can assign multiple classes to each file. This type of project would allow you to classify a video game summary as "Adventure" or "Adventure and Strategy".
+
+2. Understand how to build text classification projects
+
+Custom text classification projects are your workspace to build, train, improve, and deploy your classification model. You can work with your project in two ways: through Language Studio and via the REST API. Language Studio is the GUI that will be used in the lab, but the REST API has the same functionality. Regardless of which method you prefer, the steps for developing your model are the same.
+
+#### Custom named entity recognition.
+1. Understand custom named entity recognition
+
+Custom NER is an Azure API service that looks at documents, identifies, and extracts user defined entities. These entities could be anything from names and addresses from bank statements to knowledge mining to improve search results.
+
+2. Label your data
+
+Labeling, or tagging, your data correctly is an important part of the process to create a custom entity extraction model. Labels identify examples of specific entities in text used to train the model. Three things to focus on are:
+
+Consistency - Label your data the same way across all files for training. Consistency allows your model to learn without any conflicting inputs.
+
+Precision - Label your entities consistently, without unnecessary extra words. Precision ensures only the correct data is included in your extracted entity.
+
+Completeness - Label your data completely, and don't miss any entities. Completeness helps your model always recognize the entities present.
+
+Train and evaluate your model
+
+Training and evaluating your model is an iterative process of adding data and labels to your training dataset to teach the model more accurately. To know what types of data and labels need to be improved, Language Studio provides scoring in the View model details page on the left hand pane.
