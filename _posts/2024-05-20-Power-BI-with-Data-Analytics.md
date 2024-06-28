@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Using Power Bi for Data Analytics
-subtitle: Each post also has a subtitle
+subtitle: Learning how to Use Power BI for Analytics Purpose
 categories: Python
-tags: [Python, intro, certificate]
+tags: [Power BI, Data Analytics, intro, certificate]
 ---
 
 # Power BI with Data Analytics
