@@ -710,3 +710,115 @@ You need to encode your Azure AI Search query by sending it to an embedded model
 3. nderstand embedding
 
 An embedding is type of data representation that is used by machine learning models. An embedding represents the semantic meaning of a piece of text. You can visualize an embedding as an array of numbers, and the numerical distance between two embeddings represents their semantic similarity. For example, if two texts are similar, then their representations should also be similar.
+
+### Develop Generative AI solutions with Azure OpenAI Service
+#### Get started with Azure OpenAI Service
+1. Create an Azure OpenAI Service resource in the Azure portal
+When you create an Azure OpenAI Service resource, you need to provide a subscription name, resource group name, region, unique instance name, and select a pricing tier.
+
+2. Use Azure OpenAI Studio
+
+Azure OpenAI Studio provides access to model management, deployment, experimentation, customization, and learning resources.
+
+You can access the Azure OpenAI Studio through the Azure portal after creating a resource, or at https://oai.azure.com by logging in with your Azure OpenAI resource instance. During the sign-in workflow, select the appropriate directory, Azure subscription, and Azure OpenAI resource.
+
+3. Explore types of generative AI models
+
+To begin building with Azure OpenAI, you need to choose a base model and deploy it. Microsoft provides base models and the option to create customized base models. This module covers the currently available base models.
+
+Azure OpenAI includes several types of model:
+
+i. GPT 4 model
+ii. GPT 3.5 model 
+iii. Embeddings models
+iv Dall-E model
+
+4. Deploy generative AI models
+
+You first need to deploy a model to make API calls to receive completions to prompts. When you create a new deployment, you need to indicate which base model to deploy. You can deploy any number of deployments in one or multiple Azure OpenAI resources as long as their TPM adds up to less than 240K total in that region. There are several ways you can deploy your base model.
+
+5. Test models in Azure OpenAI Studio's playgrounds
+
+Playgrounds are useful interfaces in Azure OpenAI Studio that you can use to experiment with your deployed models without needing to develop your own client application. Azure OpenAI Studio offers multiple playgrounds with different parameter tuning options.
+
+
+#### Build natural language solutions with Azure OpenAI Service
+1. Integrate Azure OpenAI into your app
+
+Azure OpenAI offers both C# and Python SDKs and a REST API that developers can use to add AI functionality to their applications. Generative AI capabilities in Azure OpenAI are provided through models. The models available in the Azure OpenAI service belong to different families, each with their own focus. To use one of these models, you need to deploy through the Azure OpenAI Service.
+
+#### Apply prompt engineering with Azure OpenAI Service
+1. Understand prompt engineering
+
+The quality of the input prompts we send to an AI model, like those available in Azure OpenAI, directly influences the quality of what we get back. By carefully constructing the prompts we send to the model, the model can provide better and more interesting responses.
+
+2. Write more effective prompts
+
+Azure OpenAI models are capable of generating responses to natural language queries with remarkable accuracy. However, the quality of the responses depends largely on how well the prompt is written. Developers can optimize the performance of Azure OpenAI models by using different techniques in their prompts, resulting in more accurate and relevant responses.
+
+Provide clear instructions:
+Asking the Azure OpenAI model clearly for what you want is one way to get desired results. By being as descriptive as possible, the model can generate a response that most closely matches what you're looking for.
+
+#### Generate code with Azure OpenAI Service
+1. Construct code from natural language
+
+One of the capabilities of Azure OpenAI models is to generate code from natural language prompts. Tasks can range from a simple one line command to a full application. The AI models can also edit and update provided code or previous responses to complete the requested task.
+
+AI models for code generation:
+
+In previous generations of gpt models, some were trained specifically for use with code (often called codex models). As new generations of models evolve, the base models drastically improve their performance and understanding of both language and code, which results in not needing specific code models. This improvement results in just a single model for more recent generations (such as gpt-35-turbo and gpt-4) that can be used for both natural language and code.
+
+2. Fix bugs and improve your code
+
+Developers sometimes can write code that mostly works, but could be improved by fixing bugs, syntax, performance, or modularity. Azure OpenAI models can help identify ways to improve and provide suggestions on how to write better code.
+
+Fix bugs in your code:
+
+Azure OpenAI models can help fix bugs in code by analyzing the code and suggesting changes that can potentially fix the issue. This can help developers identify and resolve bugs faster and more efficiently.
+
+#### Generate images with Azure OpenAI Service
+1. What is DALL-E?
+
+DALL-E is a neural network based model that can generate graphical data from natural language input. Put more simply, you can provide DALL-E with a description and it can generate an appropriate image.
+
+#### Implement Retrieval Augmented Generation (RAG) with Azure OpenAI Service
+1. Understand Retrieval Augmented Generation (RAG) with Azure OpenAI Service
+
+RAG with Azure OpenAI allows developers to use supported AI chat models that can reference specific sources of information to ground the response. Adding this information allows the model to reference both the specific data provided and its pretrained knowledge to provide more effective responses.
+
+Azure OpenAI enables RAG by connecting pretrained models to your own data sources. Azure OpenAI on your data utilizes the search ability of Azure AI Search to add the relevant data chunks to the prompt. Once your data is in a AI Search index, Azure OpenAI on your data goes through the following steps:
+
+Receive user prompt.
+
+Determine relevant content and intent of the prompt.
+
+Query the search index with that content and intent.
+
+Insert search result chunk into the Azure OpenAI prompt, along with system message and user prompt.
+
+Send entire prompt to Azure OpenAI.
+
+response and data reference (if any) to the user.
+
+By default, Azure OpenAI on your data encourages, but doesn't require, the model to respond only using your data. This setting can be unselected when connecting your data, which may result in the model choosing to use its pretrained knowledge over your data.
+
+2. Add your own data source
+
+Adding your data is done through the Azure OpenAI Studio, in the Chat playground. The data source you add is then used to augment the prompt sent to the model. When adding your data, you can choose to upload your data files, use data in a blob storage account, or connect to an existing AI Search index.
+
+If you're uploading or using files already in a storage account, Azure OpenAI on your data supports .md, .txt, .html, .pdf, and Microsoft Word or PowerPoint files. If any of these files contain graphics or images, the response quality depends on how well text can be extracted from the visual content.
+
+When uploading data or connecting to files in a storage account, it's recommended to use the Azure OpenAI Studio to create the search resource and index. Adding data this way allows the appropriate chunking to happen when inserting into the index, yielding better responses. If you're using large text files or forms, you should use the available data preparation script to improve the AI model's accuracy.
+
+Enabling semantic search for your AI Search service can improve the result of searching your data index and you're likely to receive higher quality responses and citations. However, enabling semantic search may increase the cost of the search service.
+
+3. Chat with your model using your own data
+
+RAG with Azure OpenAI on your own data can be used in Azure OpenAI Studio with the Chat playground, or by using the API.
+
+Token considerations and recommended settings
+Since RAG with Azure OpenAI on your data includes search results on your index in the prompt, it's important to understand how that impacts your token allotment. Each call to the model includes tokens for the system message, the user prompt, conversation history, retrieved search documents, internal prompts, and the model's response.
+
+The system message, for example, is a useful reference for instructions for the model and is included with every call. While there's no token limit for the system message, when using your own data the system message gets truncated if it exceeds 200 tokens. The response from the model is also limited when using your own data is 1500 tokens.
+
+Due to these token limitations, it's recommended that you limit both the question length and the conversation history length in your call. Prompt engineering techniques such as breaking down the task and chain of thought prompting can help the model respond more effectively.
